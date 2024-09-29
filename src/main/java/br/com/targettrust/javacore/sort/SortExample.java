@@ -19,7 +19,7 @@ public class SortExample {
 //        Collections.sort(contas); // Se tem acesso ao codigo fonte de conta, é o melhor implementar Comparable
         Collections.sort(contas, new SortContaBySaldo()); // Se não tem acesso ao codigo fonte de Conta
         System.out.println(contas);
-
+        Collections.sort(contas, (c1, c2) -> c1.getSaldo().compareTo(c2.getSaldo()));
     }
 
 }
